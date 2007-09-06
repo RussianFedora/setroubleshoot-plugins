@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 1.10.0
+Version: 1.10.2
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -9,7 +9,8 @@ Source0: %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 
-BuildRequires: python
+BuildRequires: perl-XML-Parser
+BuildRequires: intltool gettext python
 Requires: dbus
 
 %define pkgdocdir %{_datadir}/doc/%{name}-%{version}
@@ -49,6 +50,12 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Thu Sep  6 2007 Dan Walsh <dwalsh@redhat.com> - 1.10.2-1
+	- Change priority on use_nfs_home_dir to 55
+
+* Thu Aug 23 2007 John Dennis <jdennis@redhat.com> - 1.10.1-1
+	- add BuildRequires perl-XML-Parser
+
 * Fri Jul 20 2007 John Dennis <jdennis@redhat.com> - 1.10.0-1
         - move all plugins and their translations from setroubleshoot-server
           package to this new independent package to allow easier updating
