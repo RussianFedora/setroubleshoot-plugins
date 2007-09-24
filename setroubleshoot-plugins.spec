@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 1.10.2
+Version: 1.10.3
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -50,6 +50,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Mon Sep 24 2007 John Dennis <jdennis@redhat.com> - 1.10.3-1
+	- Resolves bug #231762: Original PO strings bugs
+
 * Thu Sep  6 2007 Dan Walsh <dwalsh@redhat.com> - 1.10.2-1
 	- Change priority on use_nfs_home_dir to 55
 
