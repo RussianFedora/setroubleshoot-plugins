@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 1.10.3
+Version: 1.10.4
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -50,6 +50,10 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Tue Nov 13 2007 Dan Walsh <dwalsh@redhat.com> - 1.10.4-1
+- Add allow_postfix_local_write_mail_spool plugin
+- Fix execute typo
+
 * Mon Sep 24 2007 John Dennis <jdennis@redhat.com> - 1.10.3-1
 	- Resolves bug #231762: Original PO strings bugs
 
