@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.0.0
+Version: 2.0.1
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -51,6 +51,10 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Fri Jan 11 2008  <jdennis@redhat.com> - 2.0.1-1
+	- Resolve bug #332281: remove obsolete translation
+	- Resolve bug #426586: Renaming translation po file from sr@Latn to sr@latin
+
 * Fri Dec 28 2007  <jdennis@redhat.com> - 2.0.0-1
 	- prepare for v2 test release
 
