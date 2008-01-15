@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.0.1
+Version: 2.0.2
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -12,7 +12,7 @@ BuildArch: noarch
 BuildRequires: perl-XML-Parser
 BuildRequires: intltool gettext python
 Requires: dbus
-Requires: setroubleshoot >= 2.0.0
+Requires: setroubleshoot >= 2.0.0 policycoreutils >= 2.0.35-2
 
 %define pkgdocdir %{_datadir}/doc/%{name}-%{version}
 
@@ -51,6 +51,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Tue Jan 15 2008  <dwalsh@redhat.com> - 2.0.2-1
+- Add catchall_boolean.py plugin
+
 * Fri Jan 11 2008  <jdennis@redhat.com> - 2.0.1-1
 	- Resolve bug #332281: remove obsolete translation
 	- Resolve bug #426586: Renaming translation po file from sr@Latn to sr@latin
