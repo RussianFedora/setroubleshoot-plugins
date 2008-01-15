@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.0.2
+Version: 2.0.3
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
