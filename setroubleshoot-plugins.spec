@@ -1,10 +1,10 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.0.1
+Version: 2.0.4
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
-URL: https://hosted.fedoraproject.org/projects/setroubleshoot
+URL: https://fedorahosted.org/setroubleshoot
 Source0: %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
@@ -12,7 +12,10 @@ BuildArch: noarch
 BuildRequires: perl-XML-Parser
 BuildRequires: intltool gettext python
 Requires: dbus
-Requires: setroubleshoot >= 2.0.0
+Requires: setroubleshoot >= 2.0.4
+%if 0%{?fedora}
+Requires: policycoreutils >= 2.0.35-2
+%endif
 
 %define pkgdocdir %{_datadir}/doc/%{name}-%{version}
 
@@ -51,6 +54,14 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Thu Jan 31 2008  <jdennis@redhat.com> - 2.0.4-1
+	- Resolve bug #416351: setroubleshoot does not escape regex chars in suggested cmds
+	- add new template substitution $SOURCE, a friendly name, $SOURCE_PATH still exists
+	  and is the full path name of $SOURCE
+
+* Tue Jan 15 2008  <dwalsh@redhat.com> - 2.0.2-1
+	- Add catchall_boolean.py plugin
+
 * Fri Jan 11 2008  <jdennis@redhat.com> - 2.0.1-1
 	- Resolve bug #332281: remove obsolete translation
 	- Resolve bug #426586: Renaming translation po file from sr@Latn to sr@latin
