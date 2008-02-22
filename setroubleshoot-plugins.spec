@@ -1,7 +1,7 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
 Version: 2.0.4
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/setroubleshoot
@@ -52,6 +52,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Fri Feb 22 2008  <jdennis@redhat.com> - 2.0.4-3
+	- bump rev for build
+
 * Mon Feb 18 2008 John Dennis <jdennis@redhat.com> - 2.0.4-2
 	- Fix policycoreutils dependency, should only be F-9
 
