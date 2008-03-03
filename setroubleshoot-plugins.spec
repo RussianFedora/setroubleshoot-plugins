@@ -1,7 +1,7 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
 Version: 2.0.4
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/setroubleshoot
@@ -12,7 +12,7 @@ BuildArch: noarch
 BuildRequires: perl-XML-Parser
 BuildRequires: intltool gettext python
 Requires: dbus
-Requires: setroubleshoot >= 2.0.4
+Requires: setroubleshoot-server >= 2.0.4
 %if 0%{?fedora}
 Requires: policycoreutils >= 2.0.35-2
 %endif
@@ -54,6 +54,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Mon Mar  3 2008 John Dennis <jdennis@redhat.com> - 2.0.4-2
+	- change requires setroubleshoot to requires setroubleshoot-server
+
 * Thu Jan 31 2008  <jdennis@redhat.com> - 2.0.4-1
 	- Resolve bug #416351: setroubleshoot does not escape regex chars in suggested cmds
 	- add new template substitution $SOURCE, a friendly name, $SOURCE_PATH still exists
