@@ -1,7 +1,7 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
 Version: 2.0.4
-Release: 3%{?dist}
+Release: 4%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/setroubleshoot
@@ -12,7 +12,7 @@ BuildArch: noarch
 BuildRequires: perl-XML-Parser
 BuildRequires: intltool gettext python
 Requires: dbus
-Requires: setroubleshoot >= 2.0.4
+Requires: setroubleshoot-server >= 2.0.4
 %{?fc9:Requires: policycoreutils >= 2.0.35-2}
 
 %define pkgdocdir %{_datadir}/doc/%{name}-%{version}
@@ -52,6 +52,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Mon Mar  3 2008 John Dennis <jdennis@redhat.com> - 2.0.4-4
+	- change requires setroubleshoot to requires setroubleshoot-server
+
 * Fri Feb 22 2008  <jdennis@redhat.com> - 2.0.4-3
 	- bump rev for build
 
