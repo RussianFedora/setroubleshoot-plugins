@@ -1,7 +1,7 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.0.4
-Release: 7%{?dist}
+Version: 2.0.8
+Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/setroubleshoot
@@ -52,6 +52,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Wed Sep 10 2008  <dwalsh@redhat.com> - 2.0.8-1
+- Add qemu plugins
+
 * Tue Sep 9 2008  <dwalsh@redhat.com> - 2.0.7-1
 - Add catchall_booleans plugin, fix spelling
 
