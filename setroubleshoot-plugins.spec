@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.0.8
+Version: 2.0.9
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Wed Oct 15 2008  <dwalsh@redhat.com> - 2.0.9-1
+- Fix catchall_plugin
+
 * Wed Sep 10 2008  <dwalsh@redhat.com> - 2.0.8-1
 - Add qemu plugins
 
