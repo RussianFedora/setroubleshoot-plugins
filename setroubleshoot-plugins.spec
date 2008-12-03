@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.0.11
+Version: 2.0.12
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Wed Dec 3 2008  <dwalsh@redhat.com> - 2.0.12-1
+- Fix restorecon plugin
+
 * Wed Nov 5 2008  <dwalsh@redhat.com> - 2.0.11-1
 - Fix catchall_booleans
 - Fix priority on samba plugins
