@@ -1,7 +1,7 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.0.11
-Release: 2%{?dist}
+Version: 2.0.12
+Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/setroubleshoot
@@ -52,6 +52,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Wed Dec 3 2008  <dwalsh@redhat.com> - 2.0.12-1
+- Fix restorecon plugin
+
 * Mon Dec 01 2008 Ignacio Vazquez-Abrams <ivazqueznet+rpm@gmail.com> - 2.0.11-2
 - Rebuild for Python 2.6
 
