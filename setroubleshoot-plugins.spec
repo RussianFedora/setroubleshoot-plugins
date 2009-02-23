@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.0.12
+Version: 2.0.14
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,10 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Mon Feb 23 2009  <dwalsh@redhat.com> - 2.0.14-1
+- Fix allow_smbd_anon_write typo
+- Remove catchall_file plugin
+
 * Wed Dec 3 2008  <dwalsh@redhat.com> - 2.0.12-1
 - Fix restorecon plugin
 
