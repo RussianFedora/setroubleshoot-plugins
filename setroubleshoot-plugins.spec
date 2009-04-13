@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.0.15
+Version: 2.0.16
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Mon Apr 13 2009  <dwalsh@redhat.com> - 2.0.16-1
+- Change priority on restorecon plugin to happen before public_content
+
 * Fri Apr 3 2009  <dwalsh@redhat.com> - 2.0.15-1
 - Update po files
 
