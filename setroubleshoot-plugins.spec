@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.0.12
+Version: 2.0.18
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,8 +52,28 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Fri Jun 5 2009  <dwalsh@redhat.com> - 2.0.18-1
+	- Execute catchall_boolean.py before allow_daemons_use_tty
+	- Fix chcon lines to match current policy
+
+* Mon Apr 13 2009  <dwalsh@redhat.com> - 2.0.16-1
+- Change priority on restorecon plugin to happen before public_content
+
+* Fri Apr 3 2009  <dwalsh@redhat.com> - 2.0.15-1
+- Update po files
+
+* Wed Feb 25 2009 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.0.14-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_11_Mass_Rebuild
+
+* Mon Feb 23 2009  <dwalsh@redhat.com> - 2.0.14-1
+- Fix allow_smbd_anon_write typo
+- Remove catchall_file plugin
+
 * Wed Dec 3 2008  <dwalsh@redhat.com> - 2.0.12-1
 - Fix restorecon plugin
+
+* Mon Dec 01 2008 Ignacio Vazquez-Abrams <ivazqueznet+rpm@gmail.com> - 2.0.11-2
+- Rebuild for Python 2.6
 
 * Wed Nov 5 2008  <dwalsh@redhat.com> - 2.0.11-1
 - Fix catchall_booleans
