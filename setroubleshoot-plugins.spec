@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.0.16
+Version: 2.0.18
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,10 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Fri Jun 5 2009  <dwalsh@redhat.com> - 2.0.18-1
+	- Execute catchall_boolean.py before allow_daemons_use_tty
+	- Fix chcon lines to match current policy
+
 * Mon Apr 13 2009  <dwalsh@redhat.com> - 2.0.16-1
 - Change priority on restorecon plugin to happen before public_content
 
