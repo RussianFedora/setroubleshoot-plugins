@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.0.18
+Version: 2.1.1
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,14 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Fri Jun 19 2009  <dwalsh@redhat.com> - 2.1.1-1
+- Add first plugins which will launch Red Star
+- Add Thomas Liu change to allow restorecon to execute fixit button  
+  *   2009-06-19 Dan Walsh <dwalsh@redhat.com>
+	- Add setenforce.py from Thomas Liu
+	- Add sys_module.py, mmap_zero.py, kernel_modules.py, selinuxpolicy.py
+	- Allow restorecon to execute fixit command
+      	  
 * Fri Jun 5 2009  <dwalsh@redhat.com> - 2.0.18-1
 	- Execute catchall_boolean.py before allow_daemons_use_tty
 	- Fix chcon lines to match current policy
