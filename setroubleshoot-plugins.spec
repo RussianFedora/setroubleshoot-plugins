@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.1
+Version: 2.1.2
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Sat Jun 20 2009  <dwalsh@redhat.com> - 2.1.2-1
+- Fix Makefile
+
 * Fri Jun 19 2009  <dwalsh@redhat.com> - 2.1.1-1
 - Add first plugins which will launch Red Star
 - Add Thomas Liu change to allow restorecon to execute fixit button  
