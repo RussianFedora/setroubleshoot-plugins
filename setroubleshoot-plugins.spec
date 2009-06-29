@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.3
+Version: 2.1.4
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,11 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Wed Jun 29 2009  <dwalsh@redhat.com> - 2.1.4-1
+	- Add open calls
+	- Fix restorecon plugin
+	- Fix qemu calls to include checking for write
+
 * Wed Jun 24 2009  <dwalsh@redhat.com> - 2.1.3-1
 - Add sesearch capability to plugins
 
