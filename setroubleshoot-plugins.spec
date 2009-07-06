@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.5
+Version: 2.1.7
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,10 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Mon Jul 6 2009  <dwalsh@redhat.com> - 2.1.7-1
+  - Remove stunnel_is_daemon plugin
+  - Add httpd_can_sendmail
+
 * Mon Jun 29 2009  <dwalsh@redhat.com> - 2.1.5-1
 	- Add open calls
 	- Fix restorecon plugin
