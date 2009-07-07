@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.7
+Version: 2.1.8
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Tue Jul 7 2009  <dwalsh@redhat.com> - 2.1.8-1
+  - Add avc.source=sendmail to httpd_can_sendmail
+
 * Mon Jul 6 2009  <dwalsh@redhat.com> - 2.1.7-1
   - Remove stunnel_is_daemon plugin
   - Add httpd_can_sendmail
