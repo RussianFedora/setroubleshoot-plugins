@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.9
+Version: 2.1.11
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,10 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Sun Jul 19 2009  <dwalsh@redhat.com> - 2.1.11-1
+- Remove allow_default_t boolean
+- Fix global_ssp.py to report boolean name
+
 * Thu Jul 9 2009  <dwalsh@redhat.com> - 2.1.9-1
   - Add Scott Radvan. doc cleanup
 
