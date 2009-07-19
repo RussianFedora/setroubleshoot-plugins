@@ -1,11 +1,12 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
 Version: 2.0.18
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/setroubleshoot
 Source0: %{name}-%{version}.tar.gz
+Patch: setroubleshoot-plugins-2.0.18-global_ssp.patch 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 
@@ -25,6 +26,7 @@ to interpret SELinux AVC denials.
 
 %prep
 %setup -q
+%patch -p1 -b .global_ssp
 
 %build
 %configure
@@ -52,6 +54,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Sun Jun 19 2009  <dwalsh@redhat.com> - 2.0.18-2
+- Fix global_ssp to report correct boolean name
+
 * Fri Jun 5 2009  <dwalsh@redhat.com> - 2.0.18-1
 	- Execute catchall_boolean.py before allow_daemons_use_tty
 	- Fix chcon lines to match current policy
