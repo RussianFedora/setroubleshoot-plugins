@@ -1,7 +1,7 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
 Version: 2.0.18
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/setroubleshoot
@@ -54,6 +54,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Fri Jul 31 2009  <dwalsh@redhat.com> - 2.0.18-3
+- Remove stunnel_is_daemon plugin
+
 * Sun Jun 19 2009  <dwalsh@redhat.com> - 2.0.18-2
 - Fix global_ssp to report correct boolean name
 
