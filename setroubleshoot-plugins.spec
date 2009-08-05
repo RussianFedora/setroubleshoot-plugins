@@ -1,7 +1,7 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
 Version: 2.0.18
-Release: 4%{?dist}
+Release: 5%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/setroubleshoot
@@ -54,7 +54,7 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
-* Tue Aug 4 2009  <dwalsh@redhat.com> - 2.0.18-4
+* Wed Aug 4 2009  <dwalsh@redhat.com> - 2.0.18-5
 - Try agian to remove stunnel_is_daemon plugin
 
 * Fri Jul 31 2009  <dwalsh@redhat.com> - 2.0.18-3
