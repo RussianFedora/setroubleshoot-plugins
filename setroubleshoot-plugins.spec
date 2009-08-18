@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.13
+Version: 2.1.14
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,8 +52,11 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Tue Aug 18 2009  <dwalsh@redhat.com> - 2.1.14-1
+  - Change priority on mmap_zero to happen after catchall_booleans
+
 * Thu Aug 11 2009  <dwalsh@redhat.com> - 2.1.13-1
-	- Change priority on restorecon and leaks
+  - Change priority on restorecon and leaks
 
 * Thu Jul 30 2009  <dwalsh@redhat.com> - 2.1.12-1
 - Add leaks.py and tftpd_write_content.py plugin
