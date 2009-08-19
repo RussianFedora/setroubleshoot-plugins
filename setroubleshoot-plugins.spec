@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.14
+Version: 2.1.15
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Wed Aug 19 2009  <dwalsh@redhat.com> - 2.1.15-1
+  - Fix mislabeled_file.py
+
 * Tue Aug 18 2009  <dwalsh@redhat.com> - 2.1.14-1
   - Change priority on mmap_zero to happen after catchall_booleans
 
