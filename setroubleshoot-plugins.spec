@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.15
+Version: 2.1.16
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Sat Aug 22 2009  <dwalsh@redhat.com> - 2.1.16-1
+- Fix subject to not include types
+
 * Wed Aug 19 2009  <dwalsh@redhat.com> - 2.1.15-1
   - Fix mislabeled_file.py
 
