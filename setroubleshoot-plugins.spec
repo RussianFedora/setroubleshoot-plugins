@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.18
+Version: 2.1.19
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Thu Sep 10 2009  <dwalsh@redhat.com> - 2.1.19-1
+- Change summary to use full path for source
+
 * Thu Sep 10 2009  <dwalsh@redhat.com> - 2.1.18-1
 - Update po
 - Fix "compromized plugins" to report more data in summary
