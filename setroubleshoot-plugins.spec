@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.19
+Version: 2.1.20
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,10 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Thu Sep 11 2009  <dwalsh@redhat.com> - 2.1.20-1
+- Fix priority on allow_execmod
+- Update po
+
 * Thu Sep 10 2009  <dwalsh@redhat.com> - 2.1.19-1
 - Change summary to use full path for source
 
