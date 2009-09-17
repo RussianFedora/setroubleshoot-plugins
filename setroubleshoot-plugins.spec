@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.20
+Version: 2.1.21
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,7 +52,11 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
-* Thu Sep 11 2009  <dwalsh@redhat.com> - 2.1.20-1
+* Thu Sep 17 2009  <dwalsh@redhat.com> - 2.1.21-1
+- Remove allow_execmem plugin
+- Add Firefox Plugin
+
+* Fri Sep 11 2009  <dwalsh@redhat.com> - 2.1.20-1
 - Fix priority on allow_execmod
 - Update po
 
