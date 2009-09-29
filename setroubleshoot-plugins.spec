@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.22
+Version: 2.1.23
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Mon Sep 28 2009  <dwalsh@redhat.com> - 2.1.23-1
+- Fix translations
+
 * Tue Sep 22 2009  <dwalsh@redhat.com> - 2.1.22-1
 - Remove allow_daemon_user_term plugin
 
