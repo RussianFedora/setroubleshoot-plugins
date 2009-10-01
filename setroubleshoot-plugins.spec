@@ -1,7 +1,7 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.22
-Release: 1%{?dist}
+Version: 2.1.24
+Release: 2%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/setroubleshoot
@@ -52,6 +52,12 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Thu Oct 1 2009  <dwalsh@redhat.com> - 2.1.24-2
+- Add support for Green Plugins
+
+* Mon Sep 28 2009  <dwalsh@redhat.com> - 2.1.23-1
+- Fix translations
+
 * Tue Sep 22 2009  <dwalsh@redhat.com> - 2.1.22-1
 - Remove allow_daemon_user_term plugin
 
