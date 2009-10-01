@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.23
+Version: 2.1.24
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Thu Oct 1 2009  <dwalsh@redhat.com> - 2.1.24-1
+- Add support for Green Plugins
+
 * Mon Sep 28 2009  <dwalsh@redhat.com> - 2.1.23-1
 - Fix translations
 
