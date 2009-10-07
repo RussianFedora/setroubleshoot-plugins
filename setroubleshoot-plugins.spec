@@ -1,7 +1,7 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.24
-Release: 2%{?dist}
+Version: 2.1.26
+Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/setroubleshoot
@@ -52,6 +52,12 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Thu Oct 7 2009  <dwalsh@redhat.com> - 2.1.26-1
+- Add wine plugin
+
+* Thu Oct 6 2009  <dwalsh@redhat.com> - 2.1.25-1
+- Fix http_can_senmail to look for "sendmail" in command
+
 * Thu Oct 1 2009  <dwalsh@redhat.com> - 2.1.24-2
 - Add support for Green Plugins
 
