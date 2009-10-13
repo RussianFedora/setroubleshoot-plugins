@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.26
+Version: 2.1.27
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Tue Oct 13 2009  <dwalsh@redhat.com> - 2.1.27-1
+- Add vbetool plugin
+
 * Thu Oct 7 2009  <dwalsh@redhat.com> - 2.1.26-1
 - Add wine plugin
 
