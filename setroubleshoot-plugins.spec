@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.29
+Version: 2.1.30
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,10 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Mon Nov 9 2009  <dwalsh@redhat.com> - 2.1.30-1
+- Update-po
+- Add privoxy_connect_any plugin
+
 * Mon Oct 26 2009  <dwalsh@redhat.com> - 2.1.29-1
 - Update-po
 - Add httpd_write_content plugin
