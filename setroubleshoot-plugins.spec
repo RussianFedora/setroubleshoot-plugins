@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.32
+Version: 2.1.33
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Fri Nov 20 2009  <dwalsh@redhat.com> - 2.1.33-1
+- Remove report bugzilla button on lots of sealerts where there is a boolean to set.
+
 * Tue Nov 17 2009  <dwalsh@redhat.com> - 2.1.32-1
 - Remove httpd_connect_all plugin
 
