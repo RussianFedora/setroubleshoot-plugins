@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.34
+Version: 2.1.35
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,8 +52,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
-* Mon Nov 30 2009  <dwalsh@redhat.com> - 2.1.34-1
+* Mon Nov 30 2009  <dwalsh@redhat.com> - 2.1.35-1
 - Remove plugin httpd_unified and httpd_tmp_bad_labels.
+- Change priority on restorecon plugin
 
 * Fri Nov 20 2009  <dwalsh@redhat.com> - 2.1.33-1
 - Remove report bugzilla button on lots of sealerts where there is a boolean to set.
