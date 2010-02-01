@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.38
+Version: 2.1.39
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Fri Jan 29 2010  <dwalsh@redhat.com> - 2.1.39-1
+- Add Fuzzy translations
+
 * Wed Jan 27 2010  <dwalsh@redhat.com> - 2.1.38-1
 - Remove audit2why from catchall_booleans
 
