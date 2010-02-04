@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.37
+Version: 2.1.40
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -12,7 +12,7 @@ BuildArch: noarch
 BuildRequires: perl-XML-Parser
 BuildRequires: intltool gettext python
 Requires: dbus
-Requires: setroubleshoot-server >= 2.2.47-1
+Requires: setroubleshoot-server >= 2.2.61-1
 %{?fc9:Requires: policycoreutils >= 2.0.35-2}
 
 %define pkgdocdir %{_datadir}/doc/%{name}-%{version}
@@ -52,6 +52,15 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Thu Feb 4 2010  <dwalsh@redhat.com> - 2.1.40-1
+- Update translations
+
+* Fri Jan 29 2010  <dwalsh@redhat.com> - 2.1.39-1
+- Add Fuzzy translations
+
+* Wed Jan 27 2010  <dwalsh@redhat.com> - 2.1.38-1
+- Remove audit2why from catchall_booleans
+
 * Mon Jan 18 2010  <dwalsh@redhat.com> - 2.1.37-1
 - Fix FAQ pointer 
 - Fix handling of translations
