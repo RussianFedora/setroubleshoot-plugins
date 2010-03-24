@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.46
+Version: 2.1.47
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Tue Mar 24 2010  <dwalsh@redhat.com> - 2.1.47-1
+- Fix disable_ipv6 and update po
+
 * Tue Mar 23 2010  <dwalsh@redhat.com> - 2.1.46-1
 - add restorecon_source_context.py
 - add sys_resource.py
