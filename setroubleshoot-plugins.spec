@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.49
+Version: 2.1.50
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,10 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Mon Apr 26 2010  <dwalsh@redhat.com> - 2.1.50-1
+- Change use_nfs_home_dirs priority to happen after catchall_boolean
+- Update translations
+
 * Tue Apr 6 2010  <dwalsh@redhat.com> - 2.1.49-1
 - Update translations
 
