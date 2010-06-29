@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.52
+Version: 2.1.54
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,10 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Tue Jun 29 2010  <dwalsh@redhat.com> - 2.1.54-1
+- Update translations
+Resolves: #589181
+
 * Fri May 21 2010  <dwalsh@redhat.com> - 2.1.52-1
 - Remove allow_mount_anyfile boolean plugin
 
