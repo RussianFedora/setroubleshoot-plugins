@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.55
+Version: 2.1.58
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,19 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Tue Aug 10 2010  <dwalsh@redhat.com> - 2.1.58-1
+- Update translations
+Resolves: #589181
+
+* Thu Jul 29 2010  <dwalsh@redhat.com> - 2.1.57-1
+- Change httpd_write_content plugin to use httpd_sys_rw_content_t instead of httpd_sys_content_rw_t
+- Update translations
+
+* Wed Jul 28 2010  <dwalsh@redhat.com> - 2.1.56-1
+- Update translations
+- Fix filesytem_associate to use cp -p instead of cp -P
+Resolves: #589181
+
 * Mon Jul 26 2010  <dwalsh@redhat.com> - 2.1.55-1
 - Update translations
 
