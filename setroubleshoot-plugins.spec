@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.58
+Version: 2.1.59
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,10 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Tue Aug 20 2010  <dwalsh@redhat.com> - 2.1.59-1
+- Update translations
+Resolves: #589181
+
 * Tue Aug 10 2010  <dwalsh@redhat.com> - 2.1.58-1
 - Update translations
 Resolves: #589181
