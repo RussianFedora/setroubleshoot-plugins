@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.60
+Version: 2.1.61
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Fri Sep 3 2010  <dwalsh@redhat.com> - 2.1.61-1
+- connect_ports.py and bind_ports.py should match on hi_reserved_port_t
+
 * Mon Aug 30 2010  <dwalsh@redhat.com> - 2.1.60-1
 - Fix links to Uli Pages
 - Update translations
