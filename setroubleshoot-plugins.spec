@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.52
+Version: 2.1.61
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -52,6 +52,38 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Fri Sep 3 2010  <dwalsh@redhat.com> - 2.1.61-1
+- connect_ports.py and bind_ports.py should match on hi_reserved_port_t
+
+* Mon Aug 30 2010  <dwalsh@redhat.com> - 2.1.60-1
+- Fix links to Uli Pages
+- Update translations
+Resolves: #589181
+
+* Tue Aug 20 2010  <dwalsh@redhat.com> - 2.1.59-1
+- Update translations
+Resolves: #589181
+
+* Tue Aug 10 2010  <dwalsh@redhat.com> - 2.1.58-1
+- Update translations
+Resolves: #589181
+
+* Thu Jul 29 2010  <dwalsh@redhat.com> - 2.1.57-1
+- Change httpd_write_content plugin to use httpd_sys_rw_content_t instead of httpd_sys_content_rw_t
+- Update translations
+
+* Wed Jul 28 2010  <dwalsh@redhat.com> - 2.1.56-1
+- Update translations
+- Fix filesytem_associate to use cp -p instead of cp -P
+Resolves: #589181
+
+* Mon Jul 26 2010  <dwalsh@redhat.com> - 2.1.55-1
+- Update translations
+
+* Tue Jun 29 2010  <dwalsh@redhat.com> - 2.1.54-1
+- Update translations
+Resolves: #589181
+
 * Fri May 21 2010  <dwalsh@redhat.com> - 2.1.52-1
 - Remove allow_mount_anyfile boolean plugin
 
