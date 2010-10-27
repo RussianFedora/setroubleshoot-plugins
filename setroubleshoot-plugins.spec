@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.55
+Version: 3.0.0
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -12,8 +12,7 @@ BuildArch: noarch
 BuildRequires: perl-XML-Parser
 BuildRequires: intltool gettext python
 Requires: dbus
-Requires: setroubleshoot-server >= 2.2.67-1
-%{?fc9:Requires: policycoreutils >= 2.0.35-2}
+Requires: setroubleshoot-server >= 3.0.0-1
 
 %define pkgdocdir %{_datadir}/doc/%{name}-%{version}
 
@@ -52,6 +51,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Wed Oct 27 2010  <dwalsh@redhat.com> - 3.0.0-1
+- Redesign of setroubleshoot
+
 * Mon Jul 26 2010  <dwalsh@redhat.com> - 2.1.55-1
 - Update translations
 
