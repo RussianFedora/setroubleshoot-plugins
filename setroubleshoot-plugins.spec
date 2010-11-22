@@ -1,17 +1,18 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 3.0.2
+Version: 3.0.3
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/setroubleshoot
+# git clone git://git.fedorahosted.org/git/setroubleshoot.git; cd setroubleshoot
+# git archive --prefix setroubleshoot-plugins-3.0.10/426cf8ea7a38e8c5179981219d831368161b65f2 > setroubleshoot-plugins-3.0.10.tar.gz
 Source0: %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 
 BuildRequires: perl-XML-Parser
 BuildRequires: intltool gettext python
-Requires: dbus
 Requires: setroubleshoot-server >= 3.0.0-1
 
 %define pkgdocdir %{_datadir}/doc/%{name}-%{version}
@@ -34,14 +35,6 @@ rm -rf %{buildroot}
 make DESTDIR=%{buildroot} install
 %find_lang %{name}
 
-%post
-dbus-send --system /com/redhat/setroubleshootd com.redhat.SEtroubleshootdIface.restart string:'rpm install' >/dev/null 2>&1 || :
-
-%postun
-if [ $1 -eq 0 ]; then
-    dbus-send --system /com/redhat/setroubleshootd com.redhat.SEtroubleshootdIface.restart string:'rpm install' >/dev/null 2>&1 || :
-fi
-
 %clean 
 rm -rf %{buildroot}
 
@@ -51,6 +44,10 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Mon Nov 22 2010  <dwalsh@redhat.com> - 3.0.3-1
+- Update translations
+- Fix catchall plugin to give better messages on capabilities and process avcs
+
 * Mon Nov 15 2010  <dwalsh@redhat.com> - 3.0.2-1
 - Fix crash in restorecon plugin
 
