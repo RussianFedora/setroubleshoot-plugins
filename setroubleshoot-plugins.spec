@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 3.0.3
+Version: 3.0.4
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -44,6 +44,10 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Tue Nov 23 2010  <dwalsh@redhat.com> - 3.0.4-1
+- Update translations
+- Fix boolean descriptions
+
 * Mon Nov 22 2010  <dwalsh@redhat.com> - 3.0.3-1
 - Update translations
 - Fix catchall plugin to give better messages on capabilities and process avcs
