@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 3.0.5
+Version: 3.0.6
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -44,6 +44,10 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Tue Nov 30 2010  <dwalsh@redhat.com> - 3.0.6-1
+- Update translations
+- Fix openvpn plugin
+
 * Mon Nov 29 2010  <dwalsh@redhat.com> - 3.0.5-1
 - Add plugin openvpn that looks for mislabeled cert files in homedir
 - Update translations
