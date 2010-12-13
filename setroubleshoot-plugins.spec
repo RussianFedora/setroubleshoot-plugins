@@ -1,19 +1,19 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 2.1.61
+Version: 3.0.8
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/setroubleshoot
+# git clone git://git.fedorahosted.org/git/setroubleshoot.git; cd setroubleshoot
+# git archive --prefix setroubleshoot-plugins-3.0.10/426cf8ea7a38e8c5179981219d831368161b65f2 > setroubleshoot-plugins-3.0.10.tar.gz
 Source0: %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 
 BuildRequires: perl-XML-Parser
 BuildRequires: intltool gettext python
-Requires: dbus
-Requires: setroubleshoot-server >= 2.2.67-1
-%{?fc9:Requires: policycoreutils >= 2.0.35-2}
+Requires: setroubleshoot-server >= 3.0.0-1
 
 %define pkgdocdir %{_datadir}/doc/%{name}-%{version}
 
@@ -35,14 +35,6 @@ rm -rf %{buildroot}
 make DESTDIR=%{buildroot} install
 %find_lang %{name}
 
-%post
-dbus-send --system /com/redhat/setroubleshootd com.redhat.SEtroubleshootdIface.restart string:'rpm install' >/dev/null 2>&1 || :
-
-%postun
-if [ $1 -eq 0 ]; then
-    dbus-send --system /com/redhat/setroubleshootd com.redhat.SEtroubleshootdIface.restart string:'rpm install' >/dev/null 2>&1 || :
-fi
-
 %clean 
 rm -rf %{buildroot}
 
@@ -52,30 +44,37 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
-* Fri Sep 3 2010  <dwalsh@redhat.com> - 2.1.61-1
-- connect_ports.py and bind_ports.py should match on hi_reserved_port_t
+* Mon Dec 13 2010  <dwalsh@redhat.com> - 3.0.8-1
+- Update Translations 
 
-* Mon Aug 30 2010  <dwalsh@redhat.com> - 2.1.60-1
-- Fix links to Uli Pages
+* Thu Dec 2 2010  <dwalsh@redhat.com> - 3.0.7-1
 - Update translations
-Resolves: #589181
+- Fix Restorecon plugin
 
-* Tue Aug 20 2010  <dwalsh@redhat.com> - 2.1.59-1
+* Tue Nov 30 2010  <dwalsh@redhat.com> - 3.0.6-1
 - Update translations
-Resolves: #589181
+- Fix openvpn plugin
 
-* Tue Aug 10 2010  <dwalsh@redhat.com> - 2.1.58-1
-- Update translations
-Resolves: #589181
-
-* Thu Jul 29 2010  <dwalsh@redhat.com> - 2.1.57-1
-- Change httpd_write_content plugin to use httpd_sys_rw_content_t instead of httpd_sys_content_rw_t
+* Mon Nov 29 2010  <dwalsh@redhat.com> - 3.0.5-1
+- Add plugin openvpn that looks for mislabeled cert files in homedir
 - Update translations
 
-* Wed Jul 28 2010  <dwalsh@redhat.com> - 2.1.56-1
+* Tue Nov 23 2010  <dwalsh@redhat.com> - 3.0.4-1
 - Update translations
-- Fix filesytem_associate to use cp -p instead of cp -P
-Resolves: #589181
+- Fix boolean descriptions
+
+* Mon Nov 22 2010  <dwalsh@redhat.com> - 3.0.3-1
+- Update translations
+- Fix catchall plugin to give better messages on capabilities and process avcs
+
+* Mon Nov 15 2010  <dwalsh@redhat.com> - 3.0.2-1
+- Fix crash in restorecon plugin
+
+* Mon Nov 1 2010  <dwalsh@redhat.com> - 3.0.1-1
+- Fix file_t to bring back multiple solutions
+
+* Wed Oct 27 2010  <dwalsh@redhat.com> - 3.0.0-1
+- Redesign of setroubleshoot
 
 * Mon Jul 26 2010  <dwalsh@redhat.com> - 2.1.55-1
 - Update translations
