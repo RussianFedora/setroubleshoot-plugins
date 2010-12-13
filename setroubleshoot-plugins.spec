@@ -1,6 +1,6 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
-Version: 3.0.7
+Version: 3.0.8
 Release: 1%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -44,6 +44,9 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Mon Dec 13 2010  <dwalsh@redhat.com> - 3.0.8-1
+- Update Translations 
+
 * Thu Dec 2 2010  <dwalsh@redhat.com> - 3.0.7-1
 - Update translations
 - Fix Restorecon plugin
