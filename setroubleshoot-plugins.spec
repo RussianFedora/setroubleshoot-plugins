@@ -1,11 +1,12 @@
 Summary: Analysis plugins for use with setroubleshoot
 Name: setroubleshoot-plugins
 Version: 2.1.61
-Release: 1%{?dist}
+Release: 1%{?dist}.2
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/setroubleshoot
 Source0: %{name}-%{version}.tar.gz
+Patch0:	setroubleshoot-plugins-2.1.61-drop-russian-bad-translation.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 
@@ -25,6 +26,7 @@ to interpret SELinux AVC denials.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure
@@ -52,6 +54,13 @@ rm -rf %{buildroot}
 %{_datadir}/setroubleshoot/plugins
 
 %changelog
+* Mon Dec 13 2010 Arkady L. Shane <ashejn@yandex-team.ru> - 2.1.61-1.2
+- drop russian translations in some cases. Setroubleshoot crashed
+  sometimes.
+
+* Wed Dec 8 2010 Arkady L. Shane <ashejn@yandex-team.ru> - 2.1.61-1.1
+- fix end of lines in several cases ('\n' and ' \n'). rh#597557
+
 * Fri Sep 3 2010  <dwalsh@redhat.com> - 2.1.61-1
 - connect_ports.py and bind_ports.py should match on hi_reserved_port_t
 
